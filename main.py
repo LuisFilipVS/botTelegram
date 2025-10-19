@@ -1,6 +1,10 @@
 import telebot
+import os
+from dotenv import load_dotenv
 
-API_TOKEN = '7390416479:AAH0selpTQcHho7jHMLKMPWj5BQbrPErwDc'
+load_dotenv()
+
+API_TOKEN = os.getenv("TELEGRAM_TOKEN")
 bot = telebot.TeleBot(API_TOKEN)
 
 def verify_commands(message=""):
